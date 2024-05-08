@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-07T21:20:41.450227" rpa="false" schemaversion="5">
+<suite id="s1" name="POSTRequest" source="C:\vscode-workspace\REST_API_automationRF\TestCases\POSTRequest.robot">
+<test id="s1-t1" name="POST Register User" line="11">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-05-07T21:20:41.818308" level="INFO">Creating Session using : alias=registersession, url=https://demoqa.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>registersession</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-05-07T21:20:41.818308" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-07T21:20:41.818308" level="INFO">${requestbody} = {'userName': 'Shiva Pratap', 'password': 'ShivaPratap@1'}</msg>
+<var>${requestbody}</var>
+<arg>userName=${user}</arg>
+<arg>password=${pass}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-07T21:20:41.818308" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-07T21:20:41.826308" level="INFO">${header} = {'Content-Type': 'application/json;charset=utf-8', 'Accept': '*/*'}</msg>
+<var>${header}</var>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+<arg>Accept=*/*</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-07T21:20:41.826308" elapsed="0.000000"/>
+</kw>
+<kw name="Post Request" owner="RequestsLibrary">
+<msg time="2024-05-07T21:20:41.826308" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg time="2024-05-07T21:20:43.243131" level="INFO">POST Request : url=https://demoqa.com/Account/v1/User 
+ path_url=/Account/v1/User 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '57'} 
+ body={"userName": "Shiva Pratap", "password": "ShivaPratap@1"} 
+ </msg>
+<msg time="2024-05-07T21:20:43.243131" level="INFO">POST Response : url=https://demoqa.com/Account/v1/User 
+ status=406, reason=Not Acceptable 
+ headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Tue, 07 May 2024 15:50:45 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '40', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"28-Ol+1T9TtJMfkxjesktiJwJPAuBU"'} 
+ body={"code":"1204","message":"User exists!"} 
+ </msg>
+<msg time="2024-05-07T21:20:43.243131" level="INFO">C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'demoqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-05-07T21:20:43.243131" level="INFO">${response} = &lt;Response [406]&gt;</msg>
+<var>${response}</var>
+<arg>registersession</arg>
+<arg>/Account/v1/User</arg>
+<arg>data=${requestbody}</arg>
+<arg>headers=${header}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<status status="PASS" start="2024-05-07T21:20:41.826308" elapsed="1.416823"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-05-07T21:20:43.243131" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-05-07T21:20:43.243131" elapsed="0.008004"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T21:20:43.251135" level="INFO">${json} = {'code': '1204', 'message': 'User exists!'}</msg>
+<var>${json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T21:20:43.251135" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${json}[code]</arg>
+<arg>1204</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-05-07T21:20:43.251135" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${json}[message]</arg>
+<arg>User exists!</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-07T21:20:43.251135" elapsed="0.008002"/>
+</kw>
+<kw name="Post Request" owner="RequestsLibrary">
+<msg time="2024-05-07T21:20:43.259137" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg time="2024-05-07T21:20:43.546308" level="INFO">POST Request : url=https://demoqa.com/Account/v1/Authorized 
+ path_url=/Account/v1/Authorized 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '57'} 
+ body={"userName": "Shiva Pratap", "password": "ShivaPratap@1"} 
+ </msg>
+<msg time="2024-05-07T21:20:43.546308" level="INFO">POST Response : url=https://demoqa.com/Account/v1/Authorized 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Tue, 07 May 2024 15:50:45 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '4', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"4-X/5TO4MPCKAyY0ipFgr6/IraRNs"'} 
+ body=true 
+ </msg>
+<msg time="2024-05-07T21:20:43.546308" level="INFO">C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'demoqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-05-07T21:20:43.546308" level="INFO">${auth_response} = &lt;Response [200]&gt;</msg>
+<var>${auth_response}</var>
+<arg>registersession</arg>
+<arg>/Account/v1/Authorized</arg>
+<arg>data=${requestbody}</arg>
+<arg>headers=${header}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<status status="PASS" start="2024-05-07T21:20:43.259137" elapsed="0.287171"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${auth_response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-05-07T21:20:43.546308" elapsed="0.007986"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-05-07T21:20:43.554294" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${auth_response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-05-07T21:20:43.554294" elapsed="0.000000"/>
+</kw>
+<kw name="Post Request" owner="RequestsLibrary">
+<msg time="2024-05-07T21:20:43.554294" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg time="2024-05-07T21:20:44.161352" level="INFO">POST Request : url=https://demoqa.com/Account/v1/GenerateToken 
+ path_url=/Account/v1/GenerateToken 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '57'} 
+ body={"userName": "Shiva Pratap", "password": "ShivaPratap@1"} 
+ </msg>
+<msg time="2024-05-07T21:20:44.161352" level="INFO">POST Response : url=https://demoqa.com/Account/v1/GenerateToken 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Tue, 07 May 2024 15:50:45 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '285', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"11d-EKnCBajBZazy3p/vtePH2tMyngM"'} 
+ body={"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlNoaXZhIFByYXRhcCIsInBhc3N3b3JkIjoiU2hpdmFQcmF0YXBAMSIsImlhdCI6MTcxNTA5NzA0NX0.DSbtlk8hISL5jNtiNWgljA2phv3GH-oeuHy_QFbTqiU","expires":"2024-05-14T15:50:45.541Z","status":"Success","result":"User authorized successfully."} 
+ </msg>
+<msg time="2024-05-07T21:20:44.161352" level="INFO">C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'demoqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-05-07T21:20:44.161352" level="INFO">${token_response} = &lt;Response [200]&gt;</msg>
+<var>${token_response}</var>
+<arg>registersession</arg>
+<arg>/Account/v1/GenerateToken</arg>
+<arg>data=${requestbody}</arg>
+<arg>headers=${header}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<status status="PASS" start="2024-05-07T21:20:43.554294" elapsed="0.607058"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${token_response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-05-07T21:20:44.169355" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-05-07T21:20:44.169355" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${token_response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-05-07T21:20:44.169355" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T21:20:41.818308" elapsed="2.359056"/>
+</test>
+<status status="PASS" start="2024-05-07T21:20:41.450227" elapsed="2.727137"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="POSTRequest">POSTRequest</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-07T21:20:41.826308" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg time="2024-05-07T21:20:43.259137" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg time="2024-05-07T21:20:43.554294" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+</errors>
+</robot>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-05T21:54:02.322612" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="LoginLogoutTest" source="C:\vscode-workspace\robotframework-selenium\PageObjectModel\TestCases\LoginLogoutTest.robot">
+<test id="s1-s1-t1" name="Verify Login To Application" line="13">
+<kw name="Launch Insurance App" owner="LoginKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-05T21:54:02.996634" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/insurance/v1/index.php'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-05T21:54:02.996634" elapsed="4.289464"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-05T21:54:07.286098" elapsed="9.396896"/>
+</kw>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-05-05T21:54:02.996634" elapsed="13.686360"/>
+</kw>
+<kw name="Set Login Email ID" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-05T21:54:16.690992" level="INFO">Typing text 'ab@ab.com' into text field 'id:email'.</msg>
+<arg>${loginEmail}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-05T21:54:16.690992" elapsed="0.269081"/>
+</kw>
+<arg>${userid}</arg>
+<status status="PASS" start="2024-05-05T21:54:16.690992" elapsed="0.269081"/>
+</kw>
+<kw name="Set Login Password" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-05T21:54:16.966321" level="INFO">Typing text 'ab1234' into text field 'id:password'.</msg>
+<arg>${loginPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-05T21:54:16.966321" elapsed="0.197411"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-05-05T21:54:16.960073" elapsed="0.206232"/>
+</kw>
+<kw name="Click Login Button" owner="LoginKeywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-05T21:54:17.166305" level="INFO">Clicking button 'name:submit'.</msg>
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-05T21:54:17.166305" elapsed="4.102231"/>
+</kw>
+<status status="PASS" start="2024-05-05T21:54:17.166305" elapsed="4.102231"/>
+</kw>
+<kw name="Wait for login" owner="LoginKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Broker Insurance WebPage</arg>
+<arg>20s</arg>
+<arg>Login is taking longer time than expected</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-05T21:54:21.268536" elapsed="0.045294"/>
+</kw>
+<status status="PASS" start="2024-05-05T21:54:21.268536" elapsed="0.045294"/>
+</kw>
+<kw name="Verify Successful Login" owner="LoginKeywords">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-05T21:54:21.358176" level="INFO">Current page contains text 'Signed in as'.</msg>
+<arg>Signed in as</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-05T21:54:21.321836" elapsed="0.036340"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-05T21:54:21.400571" level="INFO">Current page contains text 'ab@ab.com'.</msg>
+<arg>${email}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-05T21:54:21.358176" elapsed="0.042395"/>
+</kw>
+<arg>${userid}</arg>
+<status status="PASS" start="2024-05-05T21:54:21.321836" elapsed="0.078735"/>
+</kw>
+<tag>sanity</tag>
+<status status="PASS" start="2024-05-05T21:54:02.996634" elapsed="18.403937"/>
+</test>
+<test id="s1-s1-t2" name="Logout from App" line="23">
+<kw name="Depends On Test" owner="DependencyLibrary">
+<arg>Verify Login To Application</arg>
+<status status="PASS" start="2024-05-05T21:54:21.400571" elapsed="0.000000"/>
+</kw>
+<kw name="Logout from App" owner="LoginKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-05T21:54:21.414563" level="INFO">Clicking element 'xpath://input[@value='Log out']'.</msg>
+<arg>${logoutButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-05T21:54:21.414563" elapsed="1.372006"/>
+</kw>
+<status status="PASS" start="2024-05-05T21:54:21.400571" elapsed="1.385998"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-05T21:54:22.786569" elapsed="2.278033"/>
+</kw>
+<tag>sanity</tag>
+<status status="PASS" start="2024-05-05T21:54:21.400571" elapsed="3.664031"/>
+</test>
+<status status="PASS" start="2024-05-05T21:54:02.421210" elapsed="22.645090"/>
+</suite>
+<status status="PASS" start="2024-05-05T21:54:02.375057" elapsed="22.691243"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">sanity</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="LoginLogoutTest">Suites.LoginLogoutTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

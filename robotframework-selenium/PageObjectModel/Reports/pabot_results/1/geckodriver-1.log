@@ -1,0 +1,78 @@
+1714937609387	geckodriver	INFO	Listening on 127.0.0.1:62744
+1714937612554	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "62746" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HP\\AppData\\Local\\Temp\\rust_mozprofileZZb3MF"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1714937614120	Marionette	INFO	Marionette enabled
+1714937614354	Marionette	INFO	Listening on port 62779
+WebDriver BiDi listening on ws://127.0.0.1:62746
+Read port: 62779
+1714937614627	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:62746/devtools/browser/7018c1da-60fe-46c8-9129-213100c472c0
+JavaScript warning: https://pagead2.googlesyndication.com/bg/AASg_aq3Sfm79ayG2gpd8e7h9cXGmhm9TfT9WtyNSQM.js line 2 > eval line 435 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://s0.2mdn.net/sadbundle/17397151531554809829/336x280/index.html?ev=01_250, line 282: TypeError: studio.Enabler is undefined
+JavaScript error: https://demo.guru99.com/insurance/v1/index.php, line 1: ReferenceError: validateLogin is not defined
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://demo.guru99.com."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript warning: https://gumi.criteo.com/syncframe?origin=publishertagids&topUrl=demo.guru99.com#{%22lwid%22:{%22origin%22:0},%22bundle%22:{%22origin%22:0},%22optout%22:{%22value%22:false,%22origin%22:0},%22tld%22:%22guru99.com%22,%22topUrl%22:%22demo.guru99.com%22,%22version%22:153,%22cw%22:true,%22lsw%22:true,%22origin%22:%22publishertagids%22,%22requestId%22:%220.3608514135424289%22}, line 13: Script terminated by timeout at:
+r.prototype.logPixel@https://gumi.criteo.com/syncframe?origin=publishertagids&topUrl=demo.guru99.com#{%22lwid%22:{%22origin%22:0},%22bundle%22:{%22origin%22:0},%22optout%22:{%22value%22:false,%22origin%22:0},%22tld%22:%22guru99.com%22,%22topUrl%22:%22demo.guru99.com%22,%22version%22:153,%22cw%22:true,%22lsw%22:true,%22origin%22:%22publishertagids%22,%22requestId%22:%220.3608514135424289%22}:13:3418
+r.prototype.flushEventQueue@https://gumi.criteo.com/syncframe?origin=publishertagids&topUrl=demo.guru99.com#{%22lwid%22:{%22origin%22:0},%22bundle%22:{%22origin%22:0},%22optout%22:{%22value%22:false,%22origin%22:0},%22tld%22:%22guru99.com%22,%22topUrl%22:%22demo.guru99.com%22,%22version%22:153,%22cw%22:true,%22lsw%22:true,%22origin%22:%22publishertagids%22,%22requestId%22:%220.3608514135424289%22}:13:3152
+r/<@https://gumi.criteo.com/syncframe?origin=publishertagids&topUrl=demo.guru99.com#{%22lwid%22:{%22origin%22:0},%22bundle%22:{%22origin%22:0},%22optout%22:{%22value%22:false,%22origin%22:0},%22tld%22:%22guru99.com%22,%22topUrl%22:%22demo.guru99.com%22,%22version%22:153,%22cw%22:true,%22lsw%22:true,%22origin%22:%22publishertagids%22,%22requestId%22:%220.3608514135424289%22}:13:3642
+
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://demo.guru99.com."
+1714937639765	Marionette	INFO	Stopped listening on port 62779
+JavaScript warning: https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js, line 1209: Script terminated by timeout at:
+get debug@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:46453
+b@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:50059
+3193/w<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:50098
+3193/w</<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:50432
+G@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:121063
+F@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:120128
+t@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:58123
+2021/n.emit@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:58697
+4541/ke<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:100353
+1432/a/p/</f/o[r]@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1215:3124
+f@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1215:2977
+9128/f/<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:135257
+2695/te</<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1250:10041
+a@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:138787
+8792/value/d<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:138837
+8792/t/r<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:138206
+8792/p/<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:137582
+t@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:138048
+value@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:138655
+2695/te<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1250:9926
+9128/b/</</<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:136890
+h@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:134166
+9128/b/</<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:136841
+f@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1215:2977
+4541/<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:103090
+f@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1215:2977
+9128/f/<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:135257
+t@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1225:2768
+5630/h<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1225:2879
+9128/b/</</<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:136890
+h@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:134166
+9128/b/</<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:136841
+f@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1215:2977
+9128/f/<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1209:135257
+9099/S</<@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1226:2496
+a@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1226:1772
+b@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1226:2688
+consentDataCallback@https://fdyn.pubwise.io/script/b7da2361-4ada-4374-9097-af748311b5fe/v3/dyn/pws.js:1226:331
+getUSPData@https://ccpa.privacymanager.io/1/ccpa.bundle.js:1:60299
+e/<@https://ccpa.privacymanager.io/1/ccpa.bundle.js:1:61345
+e/</<@https://ccpa.privacymanager.io/1/ccpa.bundle.js:1:60557
+e/<@https://ccpa.privacymanager.io/1/ccpa.bundle.js:1:60479
+f/<@https://ccpa.privacymanager.io/1/ccpa.bundle.js:1:56144
+f@https://ccpa.privacymanager.io/1/ccpa.bundle.js:1:56344
+p/<@https://ccpa.privacymanager.io/1/ccpa.bundle.js:1:55721
+i/<@https://ccpa.privacymanager.io/1/ccpa.bundle.js:1:46920
+h/<@https://ccpa.privacymanager.io/1/ccpa.bundle.js:1:95064
+h@https://ccpa.privacymanager.io/1/ccpa.bundle.js:1:95179
+s@https://ccpa.privacymanager.io/1/ccpa.bundle.js:1:94537
+
+Dynamically enable window occlusion 1

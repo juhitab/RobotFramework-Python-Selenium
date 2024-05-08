@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-08T14:35:05.817894" rpa="false" schemaversion="5">
+<suite id="s1" name="Vscode-Workspace" source="C:\vscode-workspace">
+<suite id="s1-s1" name="REST API automationRF" source="C:\vscode-workspace\REST_API_automationRF">
+<suite id="s1-s1-s1" name="TestCases" source="C:\vscode-workspace\REST_API_automationRF\TestCases">
+<suite id="s1-s1-s1-s1" name="GET POST PUT DELETE" source="C:\vscode-workspace\REST_API_automationRF\TestCases\GET_POST_PUT_DELETE.robot">
+<test id="s1-s1-s1-s1-t1" name="Add Object POST Request" line="90">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-05-08T14:35:06.198456" level="INFO">Creating Session using : alias=postsession, url=https://api.restful-api.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>postsession</arg>
+<arg>${baseUrl}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-05-08T14:35:06.188305" elapsed="0.018911"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-08T14:35:06.218005" level="INFO">${data} = {'year': '2020', 'price': '1749.99', 'CPU model': 'Intel Core i9', 'Hard disk size': '1 TB'}</msg>
+<var>${data}</var>
+<arg>year=2020</arg>
+<arg>price=1749.99</arg>
+<arg>CPU model=Intel Core i9</arg>
+<arg>Hard disk size=1 TB</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-08T14:35:06.218005" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-08T14:35:06.218005" level="INFO">${newobject} = {'name': 'Redmi', 'data': {'year': '2020', 'price': '1749.99', 'CPU model': 'Intel Core i9', 'Hard disk size': '1 TB'}}</msg>
+<var>${newobject}</var>
+<arg>name=Redmi</arg>
+<arg>data=${data}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-08T14:35:06.218005" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-08T14:35:06.233821" level="INFO">${header} = {'content-type': 'application/json'}</msg>
+<var>${header}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-08T14:35:06.218005" elapsed="0.016814"/>
+</kw>
+<kw name="Post Request" owner="RequestsLibrary">
+<msg time="2024-05-08T14:35:06.235125" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg time="2024-05-08T14:35:07.243827" level="INFO">POST Request : url=https://api.restful-api.dev/objects 
+ path_url=/objects 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'content-type': 'application/json', 'Content-Length': '119'} 
+ body={"name": "Redmi", "data": {"year": "2020", "price": "1749.99", "CPU model": "Intel Core i9", "Hard disk size": "1 TB"}} 
+ </msg>
+<msg time="2024-05-08T14:35:07.243827" level="INFO">POST Response : url=https://api.restful-api.dev/objects 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 08 May 2024 09:05:07 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=zrYCS9lEO6qhl8aFoKXsC2ic%2Bsr29h8ofO7MTzCKmEfD3DloGETI240TcmGhVVr3cBMN%2FOEpwoR2KTMZUL3AiCeIyot26%2Byo3ujSfoxYidZ1k%2BHAaeQnOSpwhMaUuperiMBR6mJL"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '880849410935d373-CDG', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"id":"ff8081818f4d32ff018f5773059e2a9c","name":"Redmi","createdAt":"2024-05-08T09:05:06.975+00:00","data":{"year":"2020","price":"1749.99","CPU model":"Intel Core i9","Hard disk size":"1 TB"}} 
+ </msg>
+<msg time="2024-05-08T14:35:07.243827" level="INFO">C:\Users\HP\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.restful-api.dev'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-05-08T14:35:07.243827" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>postsession</arg>
+<arg>/objects</arg>
+<arg>data=${newobject}</arg>
+<arg>headers=${header}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<status status="PASS" start="2024-05-08T14:35:06.235125" elapsed="1.008702"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-05-08T14:35:07.243827" elapsed="0.015202"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-05-08T14:35:07.259029" elapsed="0.002430"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${response.json()}[name]</arg>
+<arg>Redmi</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-05-08T14:35:07.261824" elapsed="0.001015"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2024-05-08T14:35:07.285021" level="INFO">${id} = ['ff8081818f4d32ff018f5773059e2a9c']</msg>
+<var>${id}</var>
+<arg>${response.json()}</arg>
+<arg>$.id</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2024-05-08T14:35:07.262839" elapsed="0.022182"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>id of new object is ${id}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-05-08T14:35:07.285021" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2024-05-08T14:35:07.285021" level="FAIL">'{'year': '2020', 'price': '1749.99', 'CPU model': 'Intel Core i9', 'Hard disk size': '1 TB'}' does not contain '"price":1749.99'</msg>
+<arg>${response.json()}[data]</arg>
+<arg>"price":1749.99</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2024-05-08T14:35:07.285021" elapsed="0.000000">'{'year': '2020', 'price': '1749.99', 'CPU model': 'Intel Core i9', 'Hard disk size': '1 TB'}' does not contain '"price":1749.99'</status>
+</kw>
+<status status="FAIL" start="2024-05-08T14:35:06.167314" elapsed="1.117707">'{'year': '2020', 'price': '1749.99', 'CPU model': 'Intel Core i9', 'Hard disk size': '1 TB'}' does not contain '"price":1749.99'</status>
+</test>
+<status status="FAIL" start="2024-05-08T14:35:05.856129" elapsed="1.428892"/>
+</suite>
+<status status="FAIL" start="2024-05-08T14:35:05.854250" elapsed="1.439811"/>
+</suite>
+<status status="FAIL" start="2024-05-08T14:35:05.850084" elapsed="1.443977"/>
+</suite>
+<status status="FAIL" start="2024-05-08T14:35:05.817894" elapsed="1.476167"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Vscode-Workspace">Vscode-Workspace</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="REST API automationRF">Vscode-Workspace.REST API automationRF</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="TestCases">Vscode-Workspace.REST API automationRF.TestCases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="GET POST PUT DELETE">Vscode-Workspace.REST API automationRF.TestCases.GET POST PUT DELETE</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-08T14:35:06.235125" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+</errors>
+</robot>

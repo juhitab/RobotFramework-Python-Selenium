@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 7.0 (Python 3.12.3 on win32)" generated="2024-05-06T01:04:08.300026" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="EditProfileTest" source="C:\vscode-workspace\robotframework-selenium\PageObjectModel\TestCases\EditProfileTest.robot">
+<test id="s1-s1-t1" name="Edit Profile Test" line="14">
+<kw name="Launch Insurance App" owner="LoginKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:28.327082" level="INFO">Opening browser 'headlesschrome' to base url 'https://demo.guru99.com/insurance/v1/index.php'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-06T01:03:28.327082" elapsed="11.861289"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-06T01:03:40.196367" elapsed="0.114485"/>
+</kw>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-05-06T01:03:28.327082" elapsed="11.983770"/>
+</kw>
+<kw name="Set Login Email ID" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:40.315407" level="INFO">Typing text 'ab@ab.com' into text field 'id:email'.</msg>
+<arg>${loginEmail}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:40.312889" elapsed="0.174883"/>
+</kw>
+<arg>${userid}</arg>
+<status status="PASS" start="2024-05-06T01:03:40.310852" elapsed="0.176920"/>
+</kw>
+<kw name="Set Login Password" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:40.492100" level="INFO">Typing text 'ab1234' into text field 'id:password'.</msg>
+<arg>${loginPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:40.492100" elapsed="0.170072"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-05-06T01:03:40.487772" elapsed="0.174400"/>
+</kw>
+<kw name="Click Login Button" owner="LoginKeywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:40.662172" level="INFO">Clicking button 'name:submit'.</msg>
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:40.662172" elapsed="7.301089"/>
+</kw>
+<status status="PASS" start="2024-05-06T01:03:40.662172" elapsed="7.301089"/>
+</kw>
+<kw name="Go To Edit Profile" owner="EditProfileKeywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:47.965259" level="INFO">Clicking link 'Edit Profile'.</msg>
+<arg>${editProfile}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:47.964259" elapsed="0.133014"/>
+</kw>
+<status status="PASS" start="2024-05-06T01:03:47.963261" elapsed="0.134012"/>
+</kw>
+<kw name="Select Title" owner="EditProfileKeywords">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:48.100273" level="INFO">Selecting options from selection list 'id:user_title' by label Doctor.</msg>
+<arg>${titleDrpdn}</arg>
+<arg>${title}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-06T01:03:48.099270" elapsed="0.184024"/>
+</kw>
+<arg>Doctor</arg>
+<status status="PASS" start="2024-05-06T01:03:48.098271" elapsed="0.185023"/>
+</kw>
+<kw name="Enter FirstName" owner="EditProfileKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:48.288287" level="INFO">Typing text 'Lean' into text field 'id:user_firstname'.</msg>
+<arg>${firstname}</arg>
+<arg>${fname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:48.285287" elapsed="0.345028"/>
+</kw>
+<arg>Lean</arg>
+<status status="PASS" start="2024-05-06T01:03:48.284290" elapsed="0.347025"/>
+</kw>
+<kw name="Enter Surname" owner="EditProfileKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:48.632314" level="INFO">Typing text 'Paul' into text field 'id:user_surname'.</msg>
+<arg>${surname}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:48.632314" elapsed="0.142933"/>
+</kw>
+<arg>Paul</arg>
+<status status="PASS" start="2024-05-06T01:03:48.631315" elapsed="0.143932"/>
+</kw>
+<kw name="Enter Phone Number" owner="EditProfileKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:48.777249" level="INFO">Typing text '9865748983' into text field 'id:user_phone'.</msg>
+<arg>${phone}</arg>
+<arg>${phNum}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:48.776246" elapsed="0.519375"/>
+</kw>
+<arg>9865748983</arg>
+<status status="PASS" start="2024-05-06T01:03:48.775247" elapsed="0.520374"/>
+</kw>
+<kw name="Select Date of Birth" owner="EditProfileKeywords">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:49.297621" level="INFO">Selecting options from selection list 'id:user_dateofbirth_1i' by label 1994.</msg>
+<arg>${birth_year}</arg>
+<arg>${year}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-06T01:03:49.297621" elapsed="0.132012"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:49.430633" level="INFO">Selecting options from selection list 'id:user_dateofbirth_2i' by label March.</msg>
+<arg>${birth_month}</arg>
+<arg>${month}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-06T01:03:49.429633" elapsed="0.109178"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:49.539812" level="INFO">Selecting options from selection list 'id:user_dateofbirth_3i' by label 21.</msg>
+<arg>${birth_day}</arg>
+<arg>${day}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-06T01:03:49.538811" elapsed="0.159016"/>
+</kw>
+<arg>1994</arg>
+<arg>March</arg>
+<arg>21</arg>
+<status status="PASS" start="2024-05-06T01:03:49.295621" elapsed="0.403203"/>
+</kw>
+<kw name="Select License Type" owner="EditProfileKeywords">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:49.701827" level="INFO">Selecting 'f' from radio button 'user[licencetype]'.</msg>
+<arg>${licenseTypeName}</arg>
+<arg>${type}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-05-06T01:03:49.700829" elapsed="0.149011"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:49.851841" level="INFO">Verifying radio button 'user[licencetype]' has selection 'f'.</msg>
+<arg>${licenseTypeName}</arg>
+<arg>${type}</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="PASS" start="2024-05-06T01:03:49.849840" elapsed="0.071999"/>
+</kw>
+<arg>f</arg>
+<status status="PASS" start="2024-05-06T01:03:49.698824" elapsed="0.223015"/>
+</kw>
+<kw name="Select license Period" owner="EditProfileKeywords">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:49.924842" level="INFO">Selecting options from selection list 'id:user_licenceperiod' by label 4.</msg>
+<arg>${licensePeriod}</arg>
+<arg>${period}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-06T01:03:49.923843" elapsed="0.142267"/>
+</kw>
+<arg>4</arg>
+<status status="PASS" start="2024-05-06T01:03:49.922841" elapsed="0.144268"/>
+</kw>
+<kw name="Select Occupation" owner="EditProfileKeywords">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:50.070110" level="INFO">Selecting options from selection list 'user_occupation_id' by label Surgeon.</msg>
+<arg>${occupation}</arg>
+<arg>${occup}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-06T01:03:50.069110" elapsed="0.233814"/>
+</kw>
+<arg>Surgeon</arg>
+<status status="PASS" start="2024-05-06T01:03:50.067109" elapsed="0.236814"/>
+</kw>
+<kw name="Enter Address" owner="EditProfileKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:50.307924" level="INFO">Typing text 'Colony Street' into text field 'user_address_attributes_street'.</msg>
+<arg>${address_street}</arg>
+<arg>${street}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:50.306922" elapsed="0.543083"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:50.852005" level="INFO">Typing text 'Melbourne' into text field 'user_address_attributes_city'.</msg>
+<arg>${address_city}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:50.851006" elapsed="0.183012"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:51.036019" level="INFO">Typing text 'Australia' into text field 'user_address_attributes_county'.</msg>
+<arg>${address_country}</arg>
+<arg>${country}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:51.034018" elapsed="0.160012"/>
+</kw>
+<arg>Colony Street</arg>
+<arg>Melbourne</arg>
+<arg>Australia</arg>
+<status status="PASS" start="2024-05-06T01:03:50.304923" elapsed="0.889107"/>
+</kw>
+<kw name="Enter Postcode" owner="EditProfileKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:51.195029" level="INFO">Typing text '200120' into text field 'user_address_attributes_postcode'.</msg>
+<arg>${postcode}</arg>
+<arg>${code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:51.195029" elapsed="0.204016"/>
+</kw>
+<arg>200120</arg>
+<status status="PASS" start="2024-05-06T01:03:51.194030" elapsed="0.205015"/>
+</kw>
+<kw name="Click Update User Button" owner="EditProfileKeywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:51.406046" level="INFO">Clicking button 'name:commit'.</msg>
+<arg>${updateUserBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:51.402049" elapsed="0.137008"/>
+</kw>
+<status status="PASS" start="2024-05-06T01:03:51.400047" elapsed="0.139010"/>
+</kw>
+<tag>regression</tag>
+<status status="PASS" start="2024-05-06T01:03:28.327082" elapsed="23.212974"/>
+</test>
+<status status="PASS" start="2024-05-06T01:03:27.545000" elapsed="23.995522"/>
+</suite>
+<suite id="s1-s2" name="LoginLogoutTest" source="C:\vscode-workspace\robotframework-selenium\PageObjectModel\TestCases\LoginLogoutTest.robot">
+<test id="s1-s2-t1" name="Verify Login To Application" line="13">
+<kw name="Launch Insurance App" owner="LoginKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:28.327082" level="INFO">Opening browser 'headlessfirefox' to base url 'https://demo.guru99.com/insurance/v1/index.php'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-06T01:03:28.327082" elapsed="24.718233"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-06T01:03:53.045315" elapsed="0.019996"/>
+</kw>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-05-06T01:03:28.327082" elapsed="24.738229"/>
+</kw>
+<kw name="Set Login Email ID" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:53.072322" level="INFO">Typing text 'ab@ab.com' into text field 'id:email'.</msg>
+<arg>${loginEmail}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:53.068315" elapsed="0.166537"/>
+</kw>
+<arg>${userid}</arg>
+<status status="PASS" start="2024-05-06T01:03:53.066314" elapsed="0.169537"/>
+</kw>
+<kw name="Set Login Password" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:53.240857" level="INFO">Typing text 'ab1234' into text field 'id:password'.</msg>
+<arg>${loginPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:53.238854" elapsed="0.050166"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-05-06T01:03:53.236854" elapsed="0.052166"/>
+</kw>
+<kw name="Click Login Button" owner="LoginKeywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:53.291028" level="INFO">Clicking button 'name:submit'.</msg>
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:53.290020" elapsed="4.869518"/>
+</kw>
+<status status="PASS" start="2024-05-06T01:03:53.290020" elapsed="4.869518"/>
+</kw>
+<kw name="Wait for login" owner="LoginKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Broker Insurance WebPage</arg>
+<arg>20s</arg>
+<arg>Login is taking longer time than expected</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-06T01:03:58.161538" elapsed="0.033998"/>
+</kw>
+<status status="PASS" start="2024-05-06T01:03:58.160540" elapsed="0.034996"/>
+</kw>
+<kw name="Verify Successful Login" owner="LoginKeywords">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:58.240542" level="INFO">Current page contains text 'Signed in as'.</msg>
+<arg>Signed in as</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-06T01:03:58.197537" elapsed="0.043005"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:58.269545" level="INFO">Current page contains text 'ab@ab.com'.</msg>
+<arg>${email}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-06T01:03:58.241539" elapsed="0.028006"/>
+</kw>
+<arg>${userid}</arg>
+<status status="PASS" start="2024-05-06T01:03:58.196537" elapsed="0.073008"/>
+</kw>
+<tag>sanity</tag>
+<status status="PASS" start="2024-05-06T01:03:28.327082" elapsed="29.943464"/>
+</test>
+<test id="s1-s2-t2" name="Logout from App" line="23">
+<kw name="Depends On Test" owner="DependencyLibrary">
+<arg>Verify Login To Application</arg>
+<status status="PASS" start="2024-05-06T01:03:58.274542" elapsed="0.001002"/>
+</kw>
+<kw name="Logout from App" owner="LoginKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-06T01:03:58.278546" level="INFO">Clicking element 'xpath://input[@value='Log out']'.</msg>
+<arg>${logoutButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-06T01:03:58.277545" elapsed="1.481905"/>
+</kw>
+<status status="PASS" start="2024-05-06T01:03:58.276544" elapsed="1.483906"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-06T01:03:59.760450" elapsed="3.907781"/>
+</kw>
+<tag>sanity</tag>
+<status status="PASS" start="2024-05-06T01:03:58.271544" elapsed="5.396687"/>
+</test>
+<status status="PASS" start="2024-05-06T01:03:27.545533" elapsed="36.122698"/>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 2 executions.</doc>
+<status status="PASS" start="2024-05-06T01:03:27.475000" elapsed="24.067319"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">regression</stat>
+<stat pass="2" fail="0" skip="0">sanity</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="EditProfileTest">Suites.EditProfileTest</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s2" name="LoginLogoutTest">Suites.LoginLogoutTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
